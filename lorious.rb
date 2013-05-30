@@ -35,5 +35,10 @@ end
 get '/thank-you' do  
   @title = 'Thank You!'  
  
+  erb :thanks 
+
+get '/confirmed' do  
+  @title = 'Confirmation!'  
+ 
   erb :thanks  
 end  
