@@ -466,6 +466,13 @@ font-family: 'Quando', serif;
 }
 /* === End Social === */
 /* === Misc === */
+.confirmation-text {
+  font-family: 'Copse', serif; 
+  font-size:18px;color:#3366cc;
+  font-style:italic;
+  line-height:1;
+  display:inline;
+}
 .clearfix:after {
   content: ".";
   display: block;
