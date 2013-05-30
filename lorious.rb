@@ -41,5 +41,5 @@ end
 get '/confirmed' do  
   @title = 'Confirmation!'  
  
-  erb :thanks  
+  erb :confirmed  
 end  
