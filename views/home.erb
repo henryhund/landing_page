@@ -1,10 +1,32 @@
+<script type="text/javascript" src="/assets/js/jquery.validate.js"></script>
+<script>
+$(document).ready(function(){
+$('#signup').validate({
+    rules: {
+        name: "required",
+        email: "email",
+    
+    },
+    messages: {
+        name: "",
+        email: "",
+    },
+    errorContainer: $('#errorContainer'),
+    errorLabelContainer: $('#errorContainer ul'),
+    wrapper: 'li'
+});
+  });
+</script>
+</head>
               
 
-              <form action="http://www.aweber.com/scripts/addlead.pl" method="POST">
-                <input type="text" name="name" class="name-entry" placeholder="First name" style="color: rgb(192, 192, 192);">
-                <input type="text" name="email" class="e-mail" placeholder="Email address" style="color: rgb(192, 192, 192);">
+              <form name="signup" id="signup" action="https://app.getresponse.com/add_contact_webform.html" method="POST">
+                <input type="text" name="name" class="required name-entry" placeholder="First name" style="color: rgb(192, 192, 192);">
+                <input type="text" name="email" class="required email email-entry" placeholder="Email address" style="color: rgb(192, 192, 192);">
                 <button type="submit" class="call-to-action send" id="send">Send</button>
-                <input type="hidden" name="custom expert" value="" />
+                <input type="hidden" name="webform_id" value="443338"/>
                 <span class="error" style="display: none;">Alert...</span>
               </form>
+              <script type="text/javascript" src="https://app.getresponse.com/view_webform.js?wid=443338&mg_param1=1"></script><script type="text/javascript" src="https://app.getresponse.com/view_webform.js?wid=443338&mg_param1=1"></script>
+
               <span class="request-invite">Lorious is in closed beta while we build. Request an invite and we'll get you in as soon as we can.</span>

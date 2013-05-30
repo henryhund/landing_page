@@ -31,3 +31,9 @@ get '/' do
  
   erb :home  
 end  
+
+get '/thank-you' do  
+  @title = 'Thank You!'  
+ 
+  erb :thanks  
+end  

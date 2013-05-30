@@ -145,6 +145,8 @@ font-family: 'Quando', serif;
   padding: 0px;
   margin: 0px;
   display: inline-block;
+  width:600px
+  text-align: center;
 }
 /* === END Section 0 // First Section === */
 /* === Section 1 // Second Section === */
@@ -218,7 +220,7 @@ font-family: 'Quando', serif;
   margin: 0 auto;
   text-align: center;
 }
-.e-mail {
+.email-entry {
   border: 10px solid rgba(204, 204, 204, 0.5);
   margin: 10px;
   padding: 10px;
@@ -233,7 +235,7 @@ font-family: 'Quando', serif;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
 }
-.e-mail:focus {
+.email-entry:focus {
   border-color: #3366cc;
   outline: none medium;
 }
@@ -477,13 +479,24 @@ font-family: 'Quando', serif;
   clear: both;
 }
 .error {
-  clear: both;
-  display: block;
   text-align: left;
-  margin-left: 17px;
-  font-size: 16px;
-  color: #3366cc;
+  border: 10px solid rgba(255, 0, 0, 0.5);
 }
+
+
+#errorContainer {
+    display: none;
+    overflow: auto;
+    background-color: #FFDDDD;
+    border: 1px solid #FF2323;
+    padding-top: 0;
+}
+ 
+#errorContainer label {
+    float: none;
+    width: auto;
+}
+
 /* === Media Querys === */
 /* === MAX WIDTH 1035px === */
 @media only screen and (max-width: 1035px) and (min-width: 768px) {
@@ -530,7 +543,7 @@ and (max-width: 767px) {
   .canvas {
     margin: 10px 10px 0 0;
   }
-  .e-mail {
+  .email-entry {
     width: 170px;
     font-size: 14px;
     margin: 10px;
@@ -607,7 +620,7 @@ and (max-width : 340px) {
     margin: 10px 10px 0 0;
     padding-bottom: 0 ;
   }
-  .e-mail {
+  .email-entry {
     width: 170px;
     font-size: 9px;
     margin: 10px;
