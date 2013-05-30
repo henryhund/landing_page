@@ -1,0 +1,619 @@
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 20px 0;
+}
+/* === LESS CSS Option === */
+body {
+  font-family: Oswald, sans-serif;
+  overflow-x: hidden;
+  color:#fff;
+}
+/* === Section 0 // First Section === */
+#landing {
+  width: 100%;
+  position: absolute;
+}
+.logo-bg {
+  width: 211px;
+  height: 69px;
+  margin: 10px auto;
+  background: url(/assets/img/logo-clear-background.png) 0 0 transparent;
+}
+.logo-mask {
+  width: 211px;
+  height: 69px;
+  margin: 0 auto;
+  background: url(/assets/img/images/logo-fix.png) 0 0 transparent no-repeat;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .logo-mask {
+    -webkit-mask-box-image: url(/assets/img/logo-clear-background.png);
+    -webkit-mask-attachment: fixed;
+    background-color: #3366cc;
+    background-image: none;
+  }
+}
+.call-to-action {
+  width: 160px;
+  height: 45px;
+  display: block;
+  margin: 0 auto;
+  background-color: #3366cc;
+  color: #fff;
+  font-size: 24px;
+  text-decoration: none;
+  line-height: 45px;
+  margin-top: 10px;
+}
+.call-to-action:hover {
+  color: #000;
+}
+.under-construction {
+  position: relative;
+  z-index: 2;
+  margin: 0 auto;
+  width: 960px;
+  text-align: center;
+  height: 600px;
+  top: 50%;
+  margin-top: -220px;
+  font-size: 30px;
+}
+.under-construction > span {
+  line-height: 1;
+  background-color: none;
+  color: #fff;
+  padding: 10px;
+  margin: 10px;
+  display: inline-block;
+}
+
+.under-construction > form {
+  line-height: 1;
+  color: #fff;
+  padding: 10px;
+  margin: 10px;
+  display: inline-block;
+}
+/* === END Section 0 // First Section === */
+/* === Section 1 // Second Section === */
+#details-block {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.details-block-bg {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(2, 0, 0, 0.58);
+  position: absolute;
+}
+.content {
+  width: 960px;
+  text-align: center;
+  font-size: 30px;
+  color: #ccc;
+  margin: 0 auto;
+  top: 50%;
+  height: 500px;
+  margin-top: -250px;
+  position: relative;
+}
+#details-block .content p {
+  margin: 10px;
+}
+/* Countdown css */
+.clock {
+  width: 712px;
+  height: 165px;
+  margin: 0px auto;
+}
+.canvas {
+  float: left;
+  background: url(images/circle-bg.png) top center transparent no-repeat;
+  position: relative;
+  width: 148px;
+  height: 148px;
+  margin: 10px 40px 0 0px;
+  padding-bottom: 10px;
+}
+.last-one {
+  margin-right: 0px;
+}
+.canvas > div {
+  position: absolute;
+  width: 148px;
+  height: 148px;
+  top: 25px;
+}
+.canvas > div > p.text {
+  font-size: 23px;
+  font-weight: normal;
+}
+.canvas > div > p {
+  margin: 0 !important;
+  text-align: center;
+  font-weight: bold;
+  font-size: 70px;
+}
+.newsletter-holder {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+.e-mail {
+  border: 10px solid rgba(204, 204, 204, 0.5);
+  margin: 10px;
+  padding: 10px;
+  width: 170px;
+  font-size: 14px;
+  color: #ccc;
+  float: left;
+  border-radius: 0;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+.e-mail:focus {
+  border-color: #3366cc;
+  outline: none medium;
+}
+.name-entry {
+  border: 10px solid rgba(204, 204, 204, 0.5);
+  margin: 10px;
+  padding: 10px;
+  width: 85px;
+  font-size: 14px;
+  color: #ccc;
+  float: left;
+  border-radius: 0;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+.name-entry:focus {
+  border-color: #3366cc;
+  outline: none medium;
+}
+.send {
+  border: 1px solid rgba(252,252,252, 0.5);
+  font-size: 14px;
+  margin: 10px;
+  padding: 0px;
+  height: 58px;
+  width: 75px;
+  line-height: 0px;
+  float: left;
+  cursor: pointer;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+.send:active {
+  opacity: 0.8;
+}
+/* Latest Tweet List */
+.tweet-container {
+  width: 100%;
+  background-color: #ededed;
+  position: absolute;
+  bottom: 0px;
+  padding: 20px 0 0 0;
+  height: 90px;
+}
+.tweet-content {
+  width: 700px;
+  margin: 0 auto;
+  height: 80px;
+  overflow-y: hidden;
+  position: relative;
+  font-size: 20px;
+  color: #ccc;
+  font-weight: bold;
+}
+.tweet-time {
+  padding: 0 0 0 25px !important;
+}
+.tweet-content ul.tweet_list {
+  position: absolute;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.tweet-content ul.tweet_list li {
+  padding-left: 30px;
+  height: 80px;
+}
+.tweet-content ul.tweet_list li a {
+  color: #3366cc;
+}
+.tweet-content ul.tweet_list li a:hover {
+  color: #3366cc;
+}
+.tw-icon {
+  width: 20px;
+  height: 16px;
+  margin: 5px 5px 59px  0;
+  float: left;
+  /*-webkit-mask-box-image: url(images/tweet-icon.png);*/
+
+  background: url(images/tweet-icon.png) 0 0 transparent;
+}
+.tweet_time {
+  font-size: 12px;
+}
+/* === End Section 1 // Second Section === */
+/* === Section 2 // Third Section === */
+#google-map {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+}
+.contact-info {
+  width: 500px;
+  height: 200px;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  font-size: 20px;
+  margin-left: -250px;
+}
+.contact-info > h1 {
+  font-size: 50px;
+  color: #3366cc;
+}
+.address-container {
+  width: 100%;
+  color: #ccc;
+}
+.address-container > h3 {
+  font-size: 30px;
+  color: #ccc;
+}
+.address-container > .address {
+  width: 30%;
+  margin-right: 3%;
+  float: left;
+}
+.address-container > .phones {
+  width: 67%;
+  float: left;
+}
+.address-container > .phones a, .address-container > .phones a:hover {
+  color: #3366cc;
+}
+/* === End Section 2 // Third Section === */
+/* === Navigation === */
+.nav {
+  width: 30px;
+  height: 30px;
+  display: block;
+  position: fixed;
+  right: 10px;
+  margin-left: -15px;
+  bottom: 10px;
+  z-index: 5000;
+  text-indent: -9999px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.nav a:hover {
+  background-color: #3366cc;
+}
+.arrow {
+  background: url(images/down-arrow.png) 0 0 transparent no-repeat;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+/* === End Navigation === */
+/* === Social === */
+#social {
+  width: 288px;
+  position: fixed;
+  right: 8px;
+  top: 10px;
+  z-index: 1000;
+}
+#social ul li {
+  float: right;
+  width: 30px;
+  height: 30px;
+  display: block;
+  margin-right: 2px;
+}
+#social ul li a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  text-indent: -9999em;
+}
+#social ul li a.twitter {
+  background: url(/assets/img/social-icons.png) 0 0 transparent no-repeat;
+}
+#social ul li a.facebook {
+  background: url(/assets/img/social-icons.png) -32px 0 transparent no-repeat;
+}
+#social ul li a.tumblr {
+  background: url(/assets/img/social-icons.png) -64px 0 transparent no-repeat;
+}
+#social ul li a.google {
+  background: url(/assets/img/social-icons.png) -96px 0 transparent no-repeat;
+}
+#social ul li a.dribbble {
+  background: url(/assets/img/social-icons.png) -128px 0 transparent no-repeat;
+}
+#social ul li a.linkedin {
+  background: url(/assets/img/social-icons.png) -160px 0 transparent no-repeat;
+}
+#social ul li a.youtube {
+  background: url(/assets/img/social-icons.png) -192px 0 transparent no-repeat;
+}
+#social ul li a.pinterest {
+  background: url(/assets/img/social-icons.png) -224px 0 transparent no-repeat;
+}
+#social ul li a.flicker {
+  background: url(/assets/img/social-icons.png) -256px 0 transparent no-repeat;
+}
+#social ul li a.twitter:hover {
+  background: url(/assets/img/social-icons.png) 0 -30px #3366cc no-repeat;
+}
+#social ul li a.facebook:hover {
+  background: url(/assets/img/social-icons.png) -32px -30px #3366cc no-repeat;
+}
+#social ul li a.tumblr:hover {
+  background: url(/assets/img/social-icons.png) -64px -30px #3366cc no-repeat;
+}
+#social ul li a.google:hover {
+  background: url(/assets/img/social-icons.png) -96px -30px #3366cc no-repeat;
+}
+#social ul li a.dribbble:hover {
+  background: url(/assets/img/social-icons.png) -128px -30px #3366cc no-repeat;
+}
+#social ul li a.linkedin:hover {
+  background: url(/assets/img/social-icons.png) -160px -30px #3366cc no-repeat;
+}
+#social ul li a.youtube:hover {
+  background: url(/assets/img/social-icons.png) -192px -30px #3366cc no-repeat;
+}
+#social ul li a.pinterest:hover {
+  background: url(/assets/img/social-icons.png) -224px -30px #3366cc no-repeat;
+}
+#social ul li a.flicker:hover {
+  background: url(/assets/img/social-icons.png) -256px -30px #3366cc no-repeat;
+}
+/* === End Social === */
+/* === Misc === */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+.clearfix {
+  display: inline-block;
+  clear: both;
+}
+.error {
+  clear: both;
+  display: block;
+  text-align: left;
+  margin-left: 17px;
+  font-size: 16px;
+  color: #3366cc;
+}
+/* === Media Querys === */
+/* === MAX WIDTH 1035px === */
+@media only screen and (max-width: 1035px) and (min-width: 768px) {
+  .under-construction {
+    width: 768px;
+    font-size: 30px;
+  }
+  .content {
+    width: 768px;
+    font-size: 24px;
+    margin-top: -230px;
+  }
+  .tweet-content {
+    font-size: 18px;
+  }
+  .contact-info {
+    width: 400px;
+    margin-left: -200px;
+  }
+  .contact-info > h1 {
+    font-size: 50px;
+  }
+  .newsletter-holder {
+    width: 100%;
+  }
+}
+/* === MAX WIDTH 768px === */
+@media only screen 
+and (max-width: 767px) {
+  .under-construction {
+    width: 640px;
+    height: 600px;
+    margin-top: -201px;
+    font-size: 27px;
+  }
+  .content {
+    width: 570px;
+    font-size: 24px;
+    margin-top: -330px;
+  }
+  .clock {
+    width: 320px;
+  }
+  .canvas {
+    margin: 10px 10px 0 0;
+  }
+  .e-mail {
+    width: 170px;
+    font-size: 14px;
+    margin: 10px;
+    padding: 10px;
+    border: 10px solid rgba(204, 204, 204, 0.5);
+  }
+  .name-entry {
+    width: 85px;
+    font-size: 14px;
+    margin: 10px;
+    padding: 10px;
+    border: 10px solid rgba(204, 204, 204, 0.5);
+  }
+  .send {
+    height: 58px;
+    font-size: 14px;
+    line-height: 0px;
+    width: 75px;
+    float: left;
+    margin: 10px;
+  }
+  .newsletter-holder {
+    width: 100%;
+  }
+  .tweet-content {
+    font-size: 15px;
+  }
+  .contact-info {
+    width: 350px;
+    font-size: 16px;
+    margin-left: -175px;
+  }
+  .contact-info > h1 {
+    font-size: 40px;
+  }
+  .address-container > h3 {
+    font-size: 24px;
+  }
+}
+/* === MAX WIDTH 500px === */
+@media only screen 
+and (max-width: 500px) {
+  .under-construction {
+    width: 470px;
+    height: 600px;
+    margin-top: -200px;
+    font-size: 23px;
+  }
+  .content {
+    width: 470px;
+    font-size: 24px;
+    margin-top: -330px;
+  }
+  .newsletter-holder {
+    width: 100%;
+  }
+}
+/* === MAX WIDTH 340px === */
+@media only screen 
+and (max-width : 340px) {
+  .under-construction {
+    width: 300px;
+    font-size: 20px;
+  }
+  .content {
+    width: 300px;
+    font-size: 16px;
+    margin-top: -300px;
+  }
+  .clock {
+    width: 320px;
+  }
+  .canvas {
+    margin: 10px 10px 0 0;
+    padding-bottom: 0 ;
+  }
+  .e-mail {
+    width: 170px;
+    font-size: 9px;
+    margin: 10px;
+    padding: 10px;
+    border: 10px solid rgba(204, 204, 204, 0.5);
+  }
+  .name-entry {
+    width: 85px;
+    font-size: 9px;
+    margin: 10px;
+    padding: 10px;
+    border: 10px solid rgba(204, 204, 204, 0.5);
+  }
+  .send {
+    height: 58px;
+    font-size: 14px;
+    line-height: 0px;
+    float: left;
+    margin: 10px;
+    width: 75px;
+  }
+  .tweet-content {
+    width: 300px;
+    height: 70px;
+    font-size: 14px;
+  }
+  .tweet-content ul.tweet_list li {
+    padding-left: 15px;
+  }
+  .contact-info {
+    width: 280px;
+    font-size: 16px;
+    top: 10%;
+    margin-left: -140px;
+  }
+  .contact-info > h1 {
+    font-size: 36px;
+  }
+  .address-container > h3 {
+    font-size: 24px;
+  }
+}
