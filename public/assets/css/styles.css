@@ -1,3 +1,5 @@
+
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -40,13 +42,45 @@ h5,
 h6 {
   margin: 20px 0;
 }
-/* === LESS CSS Option === */
-body {
-  font-family: Oswald, sans-serif;
-  overflow-x: hidden;
-  color:#fff;
-}
+
+/*
+font-family: 'Mako', sans-serif;
+font-family: 'Arimo', sans-serif;
+font-family: 'Oleo Script Swash Caps', cursive;
+font-family: 'Copse', serif;
+font-family: 'Roboto Slab', serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Quando', serif;
+*/
 /* === Section 0 // First Section === */
+.logo-text {
+  font-family: 'Oleo Script Swash Caps', cursive;
+  color: rgba(51, 102, 204, 0.7);
+  font-size: 80px;
+}
+
+.supersizedimg {
+  filter: blur(1px);
+  -webkit-filter: blur(1px);
+  -moz-filter: blur(1px);
+  -o-filter: blur(1px);
+  -ms-filter: blur(1px);
+}
+.overview-info {
+  font-family: 'Copse', serif;
+  font-style:none;
+  color: #fff;
+  font-size: 20px;
+  display: inline-block;
+}
+.request-invite {
+  font-family: 'Roboto', sans-serif;
+  font-style:italic;
+  color: rgb(129, 129, 129);
+  font-size: 16px;
+  display: inline-block;
+}
 #landing {
   width: 100%;
   position: absolute;
@@ -94,23 +128,22 @@ body {
   text-align: center;
   height: 600px;
   top: 50%;
-  margin-top: -220px;
+  margin-top: -201px;
   font-size: 30px;
 }
 .under-construction > span {
   line-height: 1;
   background-color: none;
-  color: #fff;
-  padding: 10px;
-  margin: 10px;
+  padding: 0px;
+  margin: 0px;
   display: inline-block;
 }
 
 .under-construction > form {
   line-height: 1;
   color: #fff;
-  padding: 10px;
-  margin: 10px;
+  padding: 0px;
+  margin: 0px;
   display: inline-block;
 }
 /* === END Section 0 // First Section === */
@@ -543,7 +576,7 @@ and (max-width: 500px) {
   .under-construction {
     width: 470px;
     height: 600px;
-    margin-top: -200px;
+    margin-top: -201px;
     font-size: 23px;
   }
   .content {
