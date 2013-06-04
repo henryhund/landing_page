@@ -1,44 +1,44 @@
 <!DOCTYPE html>
-<html lang="en" style="">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta charset="utf-8">
-  <title><%= SITE_TITLE + ' | ' + @title %></title>  
-  <!--TO DO:  add meta tags -->
-  <meta name="description" content="">
- 
-  <link href='http://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps|Copse|Roboto:900,900italic,400italic,400|Quando' rel='stylesheet' type='text/css'>
-  <link href="/assets/css/reset.css" rel="stylesheet">  
-  <link href="/assets/css/styles.css" rel="stylesheet">  
-  <!--JQUERY -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<html>
+  <head>
+    <title><%= SITE_TITLE + ' > ' + @title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps|Copse|Roboto:900,900italic,400italic,400|Quando' rel='stylesheet' type='text/css'>
+    
+    <!-- Reset -->
+    <link href="/assets/css/reset.css" rel="stylesheet">  
 
-  <!-- SuperSized JS -->
-<script type="text/javascript" src="/assets/js/supersized.core.3.2.1.min.js"></script>
-  <link rel="stylesheet" href="/assets/css/supersized.core.css" type="text/css" media="screen" />
+    <!-- Bootstrap -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="/assets/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+    <script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
+  
+    <!-- jQuery -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+
+    <!-- Custom Styles -->  
+    <link href="/assets/css/styles.css" rel="stylesheet">
+
+    <!-- Sticky Footer -->
+
+      <style type="text/css">
+
+      /* Set the fixed height of the footer here */
+
+      #footer {
+         background-color: rgba(0, 0, 0, 0.80);
+         color:#999;
+      }
 
 
-    <script type="text/javascript">
-      
-      jQuery(function($){
-        
-        $.supersized({
-          slides  :   [ {image : '/assets/img/background.jpg', title : 'Lorious'} ]
-        });
-        });
-        
-    </script>
+    </style>
 
-</head>  
-<body>  
- <!-- <header>  
-    <hgroup>  
-      <h1><a href="/"><%= SITE_TITLE %></a></h1>  
-      <h2><%= SITE_DESCRIPTION %></h2>  
-    </hgroup>  
-  </header> //-->
-
-  <section id="social">
+  </head>
+  <body>
+   <div class="container">
+    <section id="social">
       <ul>
         <li><a href="https://twitter.com/TeamLorious" target="_blank" class="twitter">twitter</a></li>
         <!--<li><a href="" class="facebook">facebook</a></li>
@@ -51,37 +51,99 @@
         <li><a href="" class="flicker">flicker</a></li> //-->
       </ul>
     </section>
-
-    <section id="landing" class="section-0" style="height: 500px;">
-      <div class="under-construction">
-        <div class="logo-text">
-          lorious
-        </div>
-        <br />
-        <span class="overview-info">Lorious connects you with the best people so you can tackle any challenge or share your knowledge.</span>
-        <br />
-        <span class="overview-info">Empower yourself to learn more, do more, <em>be more.</em></span>
-        <br />
-        <span class="overview-info">Join Lorious to find answers, improve yourself or even make a living.</span>
-        <br />
-        <br />
-        
-               
-        <%= yield %>
-
-</div>
-    </section>
-    <section id="details-block" class="section-1" style="height: 700px; top: 500px;">
-      <div class="details-block-bg">
+    <div class="hero-unit">
+      <div class="logo-text centered-text logo-placement">lorious</div>
+      <div class="overview-info centered-text overview-info-placement">
+        <span>
+          Lorious is an online marketplace where users can buy and sell expertise and knowledge. It empowers people like you to gain skills, from crafting to accounting, and take ownership of their professional identities
+          and helps users like you grow, succeed and navigate this ever-changing economy.
+        </span>
       </div>
-    </section>
+    </div>
+   
 
 
+    <script type="text/javascript" src="/assets/js/jquery.validate.js"></script>
+    <script>
+    $(document).ready(function(){
+    $('#signup').validate({
+        rules: {
+            name: "required",
+            email: "email",
+        
+        },
+        messages: {
+            name: "",
+            email: "",
+        },
+        errorContainer: $('#errorContainer'),
+        errorLabelContainer: $('#errorContainer ul'),
+        wrapper: 'li'
+    });
+      });
+    </script>
+      <div class="hero-unit
+      signup-form-placement centered-text ">
+        <form class="signup-form" name="signup" id="signup" action="https://app.getresponse.com/add_contact_webform.html" method="POST">
+          <input type="text" name="name" class="required name-entry" placeholder="First name" style="color: rgb(192, 192, 192);">
+          <input type="text" name="email" class="required email email-entry" placeholder="Email address" style="color: rgb(192, 192, 192);">
+          <button type="submit" class="call-to-action send" id="send">Send</button>
+          <input type="hidden" name="webform_id" value="443338"/>
+          <span class="error" style="display: none;">Alert...</span>
+        </form>
+        <script type="text/javascript" src="https://app.getresponse.com/view_webform.js?wid=443338&mg_param1=1"></script><script type="text/javascript" src="https://app.getresponse.com/view_webform.js?wid=443338&mg_param1=1"></script>
+        <p />
+        <span class="request-invite">Lorious is in closed beta while we build. Sign up above to request an invite and we'll get you in as soon as we can.</span>
+      </div>
+   <!-- <div class="row">
+      <div class="span4">
+        <img class="details" src="/assets/img/confused man.jpg">
+        <p />
+        Empower yourself to learn more, do more, <em>be more.</em>
+        <p />
+        Join Lorious to find answers, improve yourself or even make a living.
+      </div>
+      <div class="span4">
+        <img class="details" src="/assets/img/snorkeling.jpg">
+        <p />
+        Empower yourself to learn more, do more, <em>be more.</em>
+        <p />
+        Join Lorious to find answers, improve yourself or even make a living.
+      </div>
+      <div class="span4">
+        <img class="details" src="/assets/img/dog.jpg">
+        <p />
+        Empower yourself to learn more, do more, <em>be more.</em>
+        <p />
+        Join Lorious to find answers, improve yourself or even make a living.
+      </div>
+    </div> 
 
+    <div class="row">
+      <div class="span4">
+        <img class="details" src="/assets/img/confused man.jpg">
+        <p />
+        Empower yourself to learn more, do more, <em>be more.</em>
+        <p />
+        Join Lorious to find answers, improve yourself or even make a living.
+      </div>
+      <div class="span4">
+        <img class="details" src="/assets/img/snorkeling.jpg">
+        <p />
+        Empower yourself to learn more, do more, <em>be more.</em>
+        <p />
+        Join Lorious to find answers, improve yourself or even make a living.
+      </div>
+      <div class="span4">
+        <img class="details" src="/assets/img/dog.jpg">
+        <p />
+        Empower yourself to learn more, do more, <em>be more.</em>
+        <p />
+        Join Lorious to find answers, improve yourself or even make a living.
+      </div>
+    </div> -->
 
+  </div>
 
-
-</body>
+  </body>
 </html>
-
-  

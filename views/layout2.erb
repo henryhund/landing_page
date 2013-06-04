@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" style="">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <title><%= SITE_TITLE + ' | ' + @title %></title>  
+  <!--TO DO:  add meta tags -->
+  <meta name="description" content="">
+ 
+  <link href='http://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps|Copse|Roboto:900,900italic,400italic,400|Quando' rel='stylesheet' type='text/css'>
+  <link href="/assets/css/reset.css" rel="stylesheet">  
+  <link href="/assets/css/styles.css" rel="stylesheet">  
+  <!--JQUERY -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+
+  <!-- SuperSized JS -->
+<script type="text/javascript" src="/assets/js/supersized.core.3.2.1.min.js"></script>
+  <link rel="stylesheet" href="/assets/css/supersized.core.css" type="text/css" media="screen" />
+
+
+    <script type="text/javascript">
+      
+      jQuery(function($){
+        
+        $.supersized({
+          slides  :   [ {image : '/assets/img/background.jpg', title : 'Lorious'} ]
+        });
+        });
+        
+    </script>
+
+</head>  
+<body>  
+ <!-- <header>  
+    <hgroup>  
+      <h1><a href="/"><%= SITE_TITLE %></a></h1>  
+      <h2><%= SITE_DESCRIPTION %></h2>  
+    </hgroup>  
+  </header> //-->
+
+  <section id="social">
+      <ul>
+        <li><a href="https://twitter.com/TeamLorious" target="_blank" class="twitter">twitter</a></li>
+        <!--<li><a href="" class="facebook">facebook</a></li>
+        <li><a href="" class="tumblr">tumblr</a></li>
+        <li><a href="" class="google">google+</a></li>
+        <li><a href="" class="dribbble">dribbble</a></li>
+        <li><a href="" class="linkedin">linkedin</a></li>
+        <li><a href="" class="youtube">youtube</a></li>
+        <li><a href="" class="pinterest">pinterest</a></li>
+        <li><a href="" class="flicker">flicker</a></li> //-->
+      </ul>
+    </section>
+
+    <section id="landing" class="section-0" style="height: 500px;">
+      <div class="under-construction">
+        <div class="logo-text">
+          lorious
+        </div>
+        <br />
+        <span class="overview-info">Lorious connects you with the best people so you can tackle any challenge or share your knowledge.</span>
+        <br />
+        <span class="overview-info">Empower yourself to learn more, do more, <em>be more.</em></span>
+        <br />
+        <span class="overview-info">Join Lorious to find answers, improve yourself or even make a living.</span>
+        <br />
+        <br />
+        
+               
+        <%= yield %>
+
+</div>
+    </section>
+    <section id="details-block" class="section-1" style="height: 700px; top: 500px;">
+      <div class="details-block-bg">
+      </div>
+    </section>
+
+
+
+
+
+
+</body>
+</html>
+
+  
