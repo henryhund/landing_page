@@ -290,3 +290,15 @@ img.details {
   width: 170px;
 }
 /* === End Details Block === */
+
+/* === Confirmation Pages === */
+.confirmation-text {
+  font-family: 'Copse', serif; 
+  font-size:18px;color:#fff;
+  background-color:#3366cc;
+  font-style:italic;
+  line-height:1.5;
+  display:inline;
+  text-align: center;
+}
+/* === End Confirmation Pages === */
