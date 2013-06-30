@@ -2,6 +2,7 @@ require 'sinatra'
 # require 'data_mapper'
 require 'sinatra/flash'
 require 'sinatra/redirect_with_flash'
+require 'gibbon'
 
 enable :sessions
 
@@ -32,9 +33,19 @@ get '/' do
   erb :home  
 end  
 
-get '/thank-you' do  
-  @title = 'Thank You!'  
+post '/thank-you' do    
+  @title = 'Thank You!' 
+  @name = params[:name]
+  @email = params[:email] 
  
+
+  #set up MC API
+  gb = Gibbon.new(ENV["MAILCHIMP_API_KEY"])
+
+  #add subscirber
+  gb.list_subscribe({:id => ENV["MAILCHIMP_LIST_ID"], :email_address => @email, :merge_vars => {:FNAME => @name, :LNAME => " "}})
+
+
   erb :thanks 
 end
 
