@@ -41,6 +41,7 @@ post '/thank-you' do
 
   #set up MC API
   gb = Gibbon.new(ENV["MAILCHIMP_API_KEY"])
+  gb.throws_exceptions  = false
 
   #add subscirber
   gb.list_subscribe({:id => ENV["MAILCHIMP_LIST_ID"], :email_address => @email, :merge_vars => {:FNAME => @name, :LNAME => " "}})
